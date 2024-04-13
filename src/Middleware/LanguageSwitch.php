@@ -4,8 +4,8 @@ declare(strict_types = 1);
 
 namespace MrVaco\OrchidLanguageSwitch\Middleware;
 
-use Cache;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class LanguageSwitch
 {

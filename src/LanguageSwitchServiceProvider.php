@@ -7,6 +7,7 @@ namespace MrVaco\OrchidLanguageSwitch;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\View;
 use MrVaco\OrchidLanguageSwitch\Controllers\LanguageController;
+use MrVaco\OrchidLanguageSwitch\Middleware\LanguageSwitch;
 use Orchid\Platform\Dashboard;
 use Orchid\Platform\OrchidServiceProvider;
 
@@ -23,6 +24,8 @@ class LanguageSwitchServiceProvider extends OrchidServiceProvider
         {
             $this->router();
         });
+
+        app('router')->pushMiddlewareToGroup('web', LanguageSwitch::class);
     }
 
     public function router(): void

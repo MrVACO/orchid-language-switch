@@ -4,8 +4,8 @@ declare(strict_types = 1);
 
 namespace MrVaco\OrchidLanguageSwitch\Controllers;
 
-use Cache;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Cache;
 use Orchid\Support\Facades\Toast;
 
 class LanguageController
